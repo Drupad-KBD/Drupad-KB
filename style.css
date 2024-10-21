@@ -1,0 +1,760 @@
+:root {
+    --primary-font: 'Space Mono', monospace;
+    --primary-font-size: 320%;
+    --primary-color: #007bff; /* Light mode primary color */
+    --navbar-background: rgba(0, 0, 0, 0.8); /* Light mode navbar background - Alice Blue */
+    --navbar-outline: transprent; /* Light mode outline */
+    --background-color: white; /* Default background (light mode) */
+    --text-color: black; /* Default text color */
+  }
+  
+  body {
+      height: 380vh; /* Ensure body takes at least full viewport height */
+      width: 100%;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      overflow-x: hidden; /* Prevent horizontal overflow */
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Optional: Add a media query to adjust body styles for smaller screens */
+  @media (max-width: 768px) {
+      body {
+          height: auto; /* Allow body to adjust height based on content */
+      }
+  }
+  
+  
+  nav {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    background-color: var(--navbar-background); /* Light Alice Blue background */
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    border: 2px solid var(--navbar-outline);
+    font-weight: bold;
+    /* Outline around navbar */
+  }
+  
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 1%; left: 1%; right: 1%;
+    border-radius: 20px;
+    height: 48px; /* Adjust the height as needed */
+    width: 98%; list-style: none;
+    margin: 0; padding: 0;
+    background-color: var(--navbar-background); /* Grey block */
+    z-index: 1000; /* Set a higher z-index for the navbar */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .logo {
+    font-weight: bold; /* Bold text for logo */
+    color: white; /* Change based on theme */
+    margin-left: 15px; /* Left margin for spacing */
+    font-family: var(--primary-font);
+    font-size: 30px;
+    opacity: 0.6;
+    /* Align to the left */
+  }
+  
+  .nav-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align all items (links + button) to the rightmost end */
+    margin-left: auto; /* Pushes this group to the right */
+    padding-right: 20px;
+  }
+  
+  .nav-links ul {
+    display: flex; /* Flex for the list */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    list-style: none; /* No bullet points */
+  }
+  
+  .nav-links li {
+    padding: 15px; /* Spacing for list items */
+  }
+  
+  .nav-links a {
+    
+    padding: 8px 25px; /* Adjust padding */
+    background-color: var(--background-color); /* Background color for links */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: var(--primary-color); /* Text color */
+    
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease; /* Smooth transitions */
+  }
+  
+  .nav-links a:hover {
+    background-color: #0088a9; /* Background on hover */
+    color: var(--text-color); /* Text color on hover */
+  }
+  
+  
+  
+  
+  .dropdown {
+    position: relative;
+    display: none; /* Hidden on larger screens */
+    
+  }
+  
+  .dropbtn {
+    background-color: var(--background-color); /* Button background */
+    color:var(--text-color);
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 8px 15px;
+    margin-right: 10px; 
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: var(--text-color); /* Dropdown background */
+    min-width: 170px;
+    z-index: 1;
+    right: 0; /* Align dropdown items to the right */
+    top: 45px;
+    border-radius: 15px; /* Rounded corners */
+  }
+  
+  .dropdown-content li {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: var(--primary-color); /* Text color */
+    padding: 12px 16px;
+    text-decoration: none; /* No underline */
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 15px; /* Rounded corners */
+    
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0088a9; /* Hover background */
+    color: var(--background-color);
+  }
+  
+  .dropdown-content.show {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .dropdown {
+      display: block;
+    }
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --primary-color: #0088a9;
+    --navbar-background: rgba(64, 64, 64, 0.7);
+    
+    
+  }
+  
+  .dark-mode .logo {
+    color: white; /* Change logo color to white in dark mode */
+  }
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+  }
+  
+  #theme-icon {
+    font-size: 24px;
+  }
+  
+  /* Toggle button color based on theme */
+  .dark-mode #theme-toggle {
+    color: var(--primary-color);
+  }
+  
+  
+  
+  
+  
+  .container {
+    display: flex; /* Create a flex container */
+    flex-direction: row; /* Arrange elements horizontally */
+    margin: 0 10px; /* Adjust the margin values as needed */
+    align-items: center; /* Center elements vertically */
+    justify-content: space-evenly; /* Create space between elements */
+  }
+  
+  .name-section,
+  .about-section {
+    flex: 1; /* Allow elements to grow or shrink to fill available space */
+    
+  }
+  
+  .name-section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    margin-bottom: 20px;
+  }
+  
+  .scramble-text {
+    left: 5%;
+    top: 120px;
+    position: relative;
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-size: 420%;
+    margin: -7px;
+    margin-left: 10%;
+    font-weight: bold;
+  }
+  
+  .about-text {
+    display: flex;
+    text-align: left;
+    position: relative;
+    font-family: var(--primary-font);
+    top: 100px; /* Adjust the top value as needed */
+  
+    left: -20px;
+    font-size: 1.05rem;
+    color: --text-color;
+    font-weight: bold;
+  
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) { /* Adjust the max-width as needed */
+    .container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start */
+    }
+    
+    .name-section,
+    .about-section {
+      flex: none; /* Prevent flex items from growing */
+      width: 100%; /* Make each section take full width */
+    }
+    
+    .scramble-text {
+      justify-content: flex-end;
+      top: 65px;
+      left: -10%;
+      font-size: var(--primary-font-size);
+    }
+  
+    .about-text {
+      top: 18; /* Reset top positioning */
+      right: 0; /* Reset right positioning */
+      left: 0; /* Reset left positioning */
+      margin-top: 1px; /* Add spacing between sections if needed */
+    }
+  }
+  
+  
+  
+  
+  /* Existing styles */
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 40%;
+    margin-top: 35px;
+  }
+  
+  #image-track {
+    width: 200vw;
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    left: 50%;
+    top: 2%;
+    transform: translate(0%, 20%);
+  }
+  
+  .image-wrapper {
+    position: relative; /* Position relative for absolute positioning of tag */
+    display: inline-block; /* Ensures the wrapper takes only the necessary space */
+    overflow: hidden; /* Ensure the image cropping is applied */
+  }
+  
+  .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover; /* Maintain the cropping */
+    object-position: 100% 50%; /* Maintain the cropping position */
+    margin-top: 35px; /* Maintain existing margin */
+  }
+  
+  .image-tag {
+    position: absolute; /* Position absolute for overlaying */
+    bottom: 10px; /* Adjust the positioning */
+    left: 5px; /* Adjust the positioning */
+    background-color: var(--text-color);
+    color:var(--background-color) ; /* Text color */
+    padding: 5px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.95rem; /* Adjust font size as needed */
+    z-index: 10; /* Ensure it sits above the image */
+    pointer-events: none; /* Allow clicks to pass through */
+    font-family: var(--primary-font);
+    font-weight: bold;
+  }
+  
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+  }
+  
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+     color: var(--text-color);
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    
+  }
+
+
+  .modal-content video {
+    width: 100%; /* Adjust the width as needed */
+    border-radius: 10px; /* Adds rounded corners to the video */
+    margin-top: 10px; /* Space above the video */
+  }
+
+
+  /* Add space between bullet points in modal */
+.modal-content ul {
+    margin-top: 10px; /* Space before the entire list */
+}
+
+.modal-content ul li {
+    margin-bottom: 10px; /* Space between each list item */
+}
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  .scroll-btn {
+    display: block;
+    margin: 120px 20px; /* Center the button */
+    padding: 10px 20px;
+    
+    color: var(--background-color);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--text-color); /* Light Alice Blue background */
+  }
+  
+  .scroll-btn:hover {
+    background-color:var(--primary-color); /* Hover effect */
+    
+    
+  }
+  
+  
+  
+  /* Media Query for Mobile Screens */
+  @media (max-width: 768px) {
+    #image-track > .image {
+      height: 100vmin;
+      width: 40vmin;
+    }
+  
+    .scroll-btn {
+      font-size: 14px; /* Adjust button size for mobile */
+      margin: 140px 20px; /* Center the button */
+    }
+  }
+  
+  
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--background-color); /* Transparent background for the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-background);
+    border-radius: 15px;
+    transition: background-color 0.3s ease; /* Add transition for 
+    smooth animation */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #0088a9 ; /* Change thumb color on hover */
+  }
+  
+  .skillcontainer {
+      margin-top: 25vh;
+      font-family: var(--primary-font);
+      text-align: center; /* Center text */
+  }
+  
+  .row {
+      width: 100%;
+      display: flex;
+      justify-content: center; /* Center rows */
+      margin-top: 70px;
+  }
+  
+  .row .col {
+      flex-basis: 30%;
+      margin: 0 20px; /* Add some spacing between columns */
+  }
+  
+  .skill-box {
+      border: 2px solid #0088a9; /* Border color for each skill box */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding inside the box */
+      background-color: var(--background-color); /* Background color */
+      transition: box-shadow 0.3s ease; /* Smooth shadow transition
+    */
+  
+  }
+  
+  .skill-box:hover {
+      box-shadow: 0 4px 15px rgba(0, 136, 169, 0.3); /* Shadow on hover */
+  }
+  
+  .sub-title {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0%);
+      transition: all 1s;
+    
+  }
+  
+  .sub-title h2 {
+      color: var(--text-color);/*heading_baground*/
+      font-size: 1.25rem;
+      font-family: var(--primary-font);
+      margin-bottom: 30px;
+      font-weight: bold;
+  }
+  
+  .skills-container {
+      text-align: center; /* Center text for skills */
+  }
+  
+  .skill {
+      display: inline-block; /* Make each skill box an inline block */
+      border: 1px var(--navbar-background); /* Border color for each skill */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px; /* Padding inside the skill box */
+      margin: 10px; /* Spacing between skill boxes */
+      background-color: var(--navbar-background); /* Background color for skills */
+      opacity: 0; /* Start invisible */
+      filter: blur(5px); /* Start blurred */
+      transform: translateX(-100%); /* Start from left */
+      transition: all 1s; /* Transition for skills */
+    
+  }
+  
+  .skill.show {
+      opacity: 1; /* Fully visible */
+      filter: blur(0); /* No blur */
+      transform: translateX(0); /* Move to original position */
+  }
+  
+  .content {
+    opacity: 0; /* Fully visible */
+      filter: blur(0);
+  }
+  
+  .content.show {
+    opacity: 1; /* Fully visible */
+      filter: blur(0);
+  }
+  
+  .subject {
+      font-size: 1.05rem;
+      font-weight: bold;
+    color: white;
+  }
+  
+  
+  @media (max-width: 768px) {
+      .skillcontainer {
+          padding: 30px 8%;
+      }
+  }
+  
+  @media (max-width: 568px) {
+      .row {
+          flex-direction: column;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  #contact {
+    display: flex; /* Create a flex container */
+    flex-wrap: wrap;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    margin-top: 0vh ; /* Adjust the top margin as needed */
+  
+    padding-bottom: 60px; 
+  }
+  
+  #contact h2 {
+    display:flex;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    display: block; /* Make the heading visible */
+    font-size: 150%; /* Adjust the font size as needed */
+    margin-bottom: 15px;
+  }
+  
+  #contact:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: 0.2;
+  }
+  
+  .line a {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: var(--primary-);
+    text-decoration: none;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .line a:hover {
+    background-color: #0088a9;
+    transition: all 0.9s ease;
+  }
+  
+  .line {
+    color: var(--text-color);
+    display:flex;
+    font-family: var(--primary-font);
+    font-size: 120%;
+    flex: 0 0 auto;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px;
+  }
+  
+  .h2 {
+    
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Animation properties */
+    top:10%;
+  }
+  
+  #image-track.in-view h2 { /* Add the "in-view" class when needed */
+    opacity: 1; /* Animate to full opacity */
+  }
+  
+  
+  
+    
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  
+  .timeline-container {
+      color: var(--text-color);
+      font-family: var(--primary-font);
+    font-size: 1.05rem;
+      
+      max-width: 800px; /* Maximum width for the content */
+      margin: 15vh auto; /* Center the container */
+      padding: 20px; /* Add some padding */
+      text-align: center; /* Center text */
+    
+  }
+  
+  h1 {
+      font-size: 1.85rem;
+      margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .timeline {
+    
+      position: relative;
+      padding: 20px 0; /* Padding on top and bottom */
+  }
+  
+  
+  .entry {
+      position: relative;
+      margin: 20px 0; /* Space between entries */
+      padding: 10px; /* Add padding for better spacing */
+      background-color: #000; /* Change background to black */
+      border-radius: 9px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Regular shadow for depth */
+      transition: box-shadow 0.3s, border 0.3s; /* Transition for hover effect */
+      width: calc(50% - 40px); /* Adjust width to allow for padding */
+      margin-left: 25%; /* Align left with respect to center */
+      color: #fff; /* Change text color to white for contrast */
+      border: 2px solid transparent; /* Transparent border initially */
+  }
+  
+  /* Hover effect with glow on border */
+  .entry:hover {
+      border: 3px solid rgba(255, 255, 255, 0.6); /* White glowing border */
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Remove box-shadow */
+      animation: glow 0.5s forwards; /* Add glow animation */
+  }
+  
+  
+  
+  
+  
+  .icon {
+      font-size: 24px; /* Icon size */
+      position: absolute;
+      top: 20px;
+      
+      color: #007bff; /* Icon color */
+  }
+  
+  .left .icon {
+      left: 102%; /* Position icon to the left for left entries */
+    
+  }
+  
+  .right .icon {
+      right: 106%; /* Position icon to the right for right entries */
+  }
+  
+  .left {
+      left: 0; /* Align left */
+      transform: translateX(-50%); /* Adjust for zig-zag */
+  }
+  
+  .right {
+      left: 30%; /* Align right */
+      transform: translateX(0); /* Adjust for zig-zag */
+  }
+  
+  .content {
+      font-size: 1.05rem;
+      padding: 5px;
+      text-align: left; /* Align text to the left */
+  }
+  
+  /* Marker for the center line */
+  .entry:before {
+      content: '';
+      position: absolute;
+      left: 50%; /* Center it on the line */
+      top: 15px; /* Adjust top position to align with the entry */
+      border-radius: 50%; /* Circular marker */
+      transform: translateX(-50%); /* Center the marker */
+    font-size: 1rem;
+  }
+  
+  .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%; /* Center line */
+      top: 0;
+      bottom: 0;
+      width: 4px; /* Line thickness */
+      background-color: #007bff; /* Line color */
+      border-radius: 8px; /* Rounded corners for the line */
+      z-index: -1; /* Send behind the entries */
+  }
+  
+  @media (max-width: 768px) {
+      .entry {
+          width: 90%; /* Reduce width on smaller screens */
+          margin: 10px auto; /* Center entries */
+          margin-left: 0; /* Remove left margin */
+         
+      }
+    
+    .left .icon {
+      left: -13%; /* Position icon to the left for left entries */
+    
+  }
+  
+           
+         .left {
+          left: 0; /* Align left */
+          transform: translateX(14.5%); /* Adjust for zig-zag */
+      }
+  
+      .right {
+          left: 30%; /* Align right */
+          transform: translateX(-17.5%); /* Adjust for zig-zag */
+      }
+  
+      .timeline::before {
+          left: 5%; /* Center line on small screens */
+      }
+  }
+  
+  
