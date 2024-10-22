@@ -287,7 +287,7 @@
   }
   
   #image-track {
-   
+    width:200vw;
     display: flex;
     gap: 4vmin;
     position: relative;
@@ -307,8 +307,7 @@
   .image-wrapper {
     position: relative; /* Position relative for absolute positioning of tag */
     display: inline-block; /* Ensures the wrapper takes only the necessary space */
-    width: 40vmin;
-    height: 56vmin;
+   
     overflow: hidden; /* Ensure the image cropping is applied */
   }
   
@@ -425,7 +424,7 @@
     margin-top: 10%; /* Increase top value to move images further down */
   }
       #projects {
-        margin-top: 100px; /* Increase the top margin for mobile view */
+        margin-top: 80px; /* Increase the top margin for mobile view */
     }
   
     .scroll-btn {
@@ -433,7 +432,6 @@
       margin: 140px 20px; /* Center the button */
     }
   }
-  
   
   
   ::-webkit-scrollbar {
