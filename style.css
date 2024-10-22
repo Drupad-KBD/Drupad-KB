@@ -8,7 +8,7 @@
     --text-color: black; /* Default text color */
   }
   
-  body {
+  html, body {
       height: 380vh; /* Ensure body takes at least full viewport height */
       width: 100%;
       background-color: var(--background-color);
