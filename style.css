@@ -281,12 +281,12 @@
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: 100% 40%;
+    object-position: 100% 50%;
     margin-top: 35px;
   }
   
   #image-track {
-   
+    width: 200vw;
     display: flex;
     gap: 4vmin;
     position: relative;
@@ -301,13 +301,7 @@
     overflow: hidden; /* Ensure the image cropping is applied */
   }
   
-  .image {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover; /* Maintain the cropping */
-    object-position: 100% 50%; /* Maintain the cropping position */
-    margin-top: 35px; /* Maintain existing margin */
-  }
+ 
   
   .image-tag {
     position: absolute; /* Position absolute for overlaying */
