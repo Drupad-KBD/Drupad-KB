@@ -354,7 +354,7 @@
 
 
   .modal-content video {
-    width: 100%; /* Adjust the width as needed */
+    width: 80%; /* Adjust the width as needed */
     border-radius: 10px; /* Adds rounded corners to the video */
     margin-top: 10px; /* Space above the video */
   }
@@ -414,10 +414,7 @@
     #image-track > .image {
       height: 100vmin;
       width: 40vmin;
-    }
-    .image{
-     top:100px;
-    
+        top:100px;
     }
   
     .scroll-btn {
