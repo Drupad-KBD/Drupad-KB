@@ -269,6 +269,7 @@
       right: 0; /* Reset right positioning */
       left: 0; /* Reset left positioning */
       margin-top: -40px; /* Add spacing between sections if needed */
+     margin-bottom: 30px;
     }
   }
   
