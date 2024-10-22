@@ -294,6 +294,14 @@
     top: 2%;
     transform: translate(0%, 20%);
   }
+
+  .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover; /* Maintain the cropping */
+    object-position: 100% 50%; /* Maintain the cropping position */
+    margin-top: 35px; /* Maintain existing margin */
+  }
   
   .image-wrapper {
     position: relative; /* Position relative for absolute positioning of tag */
