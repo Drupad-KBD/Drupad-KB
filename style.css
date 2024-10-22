@@ -283,6 +283,7 @@
     object-fit: cover;
     object-position: 100% 50%;
     margin-top: 35px;
+    position: relative;
   }
   
   #image-track {
@@ -422,7 +423,7 @@
     margin-top: 10%; /* Increase top value to move images further down */
   }
       #projects {
-        margin-top: 150px; /* Increase the top margin for mobile view */
+        margin-top: 100px; /* Increase the top margin for mobile view */
     }
   
     .scroll-btn {
