@@ -419,6 +419,9 @@
       #image-track {
     margin-top: 10%; /* Increase top value to move images further down */
   }
+      #projects {
+        margin-top: 150px; /* Increase the top margin for mobile view */
+    }
   
     .scroll-btn {
       font-size: 14px; /* Adjust button size for mobile */
