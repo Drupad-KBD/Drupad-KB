@@ -286,7 +286,7 @@
   }
   
   #image-track {
-    width: 200vw;
+   
     display: flex;
     gap: 4vmin;
     position: relative;
@@ -355,7 +355,7 @@
 
 
   .modal-content video {
-    width: 80%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     border-radius: 10px; /* Adds rounded corners to the video */
     margin-top: 10px; /* Space above the video */
   }
@@ -417,7 +417,7 @@
       width: 40vmin;
     }
       #image-track {
-    top: 10%; /* Increase top value to move images further down */
+    margin-top: 10%; /* Increase top value to move images further down */
   }
   
     .scroll-btn {
