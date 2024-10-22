@@ -414,7 +414,7 @@
     #image-track > .image {
       height: 100vmin;
       width: 40vmin;
-        top:100px;
+      margin-top: 40px;
     }
   
     .scroll-btn {
