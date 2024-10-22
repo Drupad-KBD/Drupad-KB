@@ -307,6 +307,8 @@
   .image-wrapper {
     position: relative; /* Position relative for absolute positioning of tag */
     display: inline-block; /* Ensures the wrapper takes only the necessary space */
+    width: 40vmin;
+    height: 56vmin;
     overflow: hidden; /* Ensure the image cropping is applied */
   }
   
