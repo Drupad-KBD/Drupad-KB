@@ -413,8 +413,8 @@
   /* Media Query for Mobile Screens */
   @media (max-width: 768px) {
     #image-track > .image {
-      height: 100vmin;
-      width: 40vmin;
+      height: 50vmin;
+      width: 100vmin;
     }
       #image-track {
     margin-top: 10%; /* Increase top value to move images further down */
