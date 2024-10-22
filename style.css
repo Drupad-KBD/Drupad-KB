@@ -414,8 +414,10 @@
     #image-track > .image {
       height: 100vmin;
       width: 40vmin;
-      margin-top: 40px;
     }
+      #image-track {
+    top: 10%; /* Increase top value to move images further down */
+  }
   
     .scroll-btn {
       font-size: 14px; /* Adjust button size for mobile */
