@@ -268,7 +268,7 @@
       top: 18; /* Reset top positioning */
       right: 0; /* Reset right positioning */
       left: 0; /* Reset left positioning */
-      margin-top: 1px; /* Add spacing between sections if needed */
+      margin-top: -20px; /* Add spacing between sections if needed */
     }
   }
   
@@ -415,6 +415,10 @@
       height: 100vmin;
       width: 40vmin;
     }
+     .image{
+      top:10px;
+
+      }
   
     .scroll-btn {
       font-size: 14px; /* Adjust button size for mobile */
