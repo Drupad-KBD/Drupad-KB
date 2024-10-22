@@ -268,7 +268,7 @@
       top: 18; /* Reset top positioning */
       right: 0; /* Reset right positioning */
       left: 0; /* Reset left positioning */
-      margin-top: -20px; /* Add spacing between sections if needed */
+      margin-top: -30px; /* Add spacing between sections if needed */
     }
   }
   
@@ -416,7 +416,7 @@
       width: 40vmin;
     }
      .image{
-      top:10px;
+      top:20px;
 
       }
   
