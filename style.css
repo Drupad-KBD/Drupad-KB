@@ -735,7 +735,7 @@
       left: 50%; /* Center line */
       top: 0;
       bottom: 0;
-      width: 4px; /* Line thickness */
+      width: 19px; /* Line thickness */
       background-color: red; /* Line color */
       border-radius: 8px; /* Rounded corners for the line */
       z-index: -1; /* Send behind the entries */
