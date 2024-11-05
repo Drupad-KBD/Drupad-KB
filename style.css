@@ -1,5 +1,5 @@
 :root {
-    --primary-font: 'Space Mono', monospace;
+    --primary-font: "Poppins", sans-serif;
     --primary-font-size: 320%;
     --primary-color: #007bff; /* Light mode primary color */
     --navbar-background: rgba(0, 0, 0, 0.8); /* Light mode navbar background - Alice Blue */
