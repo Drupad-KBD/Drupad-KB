@@ -56,7 +56,7 @@
     font-weight: bold; /* Bold text for logo */
     color: white; /* Change based on theme */
     margin-left: 15px; /* Left margin for spacing */
-    font-family: var(--primary-font);
+    font-family: 'Space Mono', monospace;
     font-size: 30px;
     opacity: 0.6;
     /* Align to the left */
@@ -223,7 +223,7 @@
     top: 120px;
     position: relative;
     color: var(--text-color);
-    font-family: var(--primary-font);
+    font-family: 'Space Mono', monospace;
     font-size: 420%;
     margin: -7px;
     margin-left: 10%;
