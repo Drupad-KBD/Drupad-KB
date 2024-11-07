@@ -360,11 +360,11 @@
   margin-top: 20px;
 }
 
-.section {
+.spaced-section {
     margin-bottom: 20px; /* Space between sections */
 }
 
-.section p {
+.spaced-section p {
     margin: 10px 0; /* Space between paragraphs within a section */
     line-height: 1.6; /* Optional: Increase line spacing for readability */
 }
@@ -385,6 +385,9 @@ li {
     margin-bottom: 5px; /* Space between list items */
 }
 
+p {
+  line-height: 1.6; /* Adjust this value for more or less spacing */
+}
 
 
 
