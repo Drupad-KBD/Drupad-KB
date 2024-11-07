@@ -357,6 +357,10 @@
     
   }
 
+.project-title {
+  font-size: 1.25rem; /* Control font size here */
+  font-weight: bold; /* Optional: make the title bold */
+}
 
 #projects p {
   font-size: 1rem;  /* Default font size for paragraphs */
