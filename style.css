@@ -360,6 +360,34 @@
   margin-top: 20px;
 }
 
+.section {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.section p {
+    margin: 10px 0; /* Space between paragraphs within a section */
+    line-height: 1.6; /* Optional: Increase line spacing for readability */
+}
+
+.section strong {
+    display: block;
+    font-size: 1.1em; /* Slightly larger for emphasis */
+    margin-bottom: 8px; /* Add space below headings */
+}
+
+ul {
+    margin-top: 10px; /* Space between the heading and list */
+    margin-bottom: 20px; /* Consistent spacing below list */
+    padding-left: 20px; /* Indentation for list items */
+}
+
+li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+
+
+
 /* For large screens: limit video width */
 @media (min-width: 768px) {
   .modal-content video {
