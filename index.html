@@ -62,13 +62,59 @@
 
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <div class="image-wrapper" ondblclick="openDescription('Interfacial Strength Study of Dyneema®', `
-        <p><strong>Summary:</strong> Improve the impact resistance of Dyneema composites by investigating the role of interlayer adhesion and optimizing composite configurations for enhanced ballistic performance.</p>
-       
-        <ul>
-          <li>Developed a FEA model in ANSYS LS-Dyna simulating ballistic impact of Dyneema® sheet with 72 composite sheets with inter layer adhesion definition.</li>
-          <li>Optimized Dyneema®-TPU composite configurations, improving ballistic resistance by 4% and reducing weight by 1.2% through parametric FEA simulations.</li>
-          <li>Imporved FEA model accuracy by 85% using Mixed-Mode Cohesive Zone Model replacing Tie-breaker contacts, capturing complex adhesive mechanics.</li>
-        </ul>`, 'linkedin post/dyn_disp.mp4')">
+        <p><strong>Introduction:</strong></p>
+<p>Dyneema®, a high-performance composite made from Ultra High Molecular Weight Polyethylene (UHMWPE), renowned for its exceptional impact resistance and high strength-to-weight ratio. It is up to 15 times stronger than steel by weight and nearly 50% lighter than Kevlar coupled with resistance to water and abrasion made Dyneema® is a top choice for ballistic protection in military, law enforcement, and high-performance sports equipment.</p>
+
+<p>Unlike traditional ballistic materials like Kevlar, Dyneema® composites have a minimal resin content, resulting in low interlaminar shear strength. This unique characteristic has received limited attention in research, as traditional studies often assume that interlaminar adhesion has a negligible impact on impact performance. However, our study challenges this assumption by investigating the critical role of interlaminar shear strength between UHMWPE plies in influencing the composite's ballistic performance.</p>
+
+<p>To investigate the impact of interlayer adhesion on Dyneema's ballistic performance, a two-part approach was employed. First, experimental testing was conducted to measure interfacial shear strength. Two distinct sample designs were used to evaluate the influence of resin type and fiber orientation on potential debonding planes. Second, a high-fidelity computational model was developed in LS-Dyna to simulate the effects of varying interlaminar shear strength on the composite's ballistic performance under different adhesion conditions.</p>
+
+<p>Once the model was validated, it was used to simulate various Dyneema® composite configurations with different interlaminar adhesion properties and material compositions. By systematically varying these parameters, the impact of interlayer adhesion on the composite's response to high-velocity impact was assessed. This approach allowed for the identification of optimal configurations that balance weight, flexibility, and ballistic performance.</p>
+
+<p><strong>Experimental Testing:</strong></p>
+<p><strong>Adhesion Testing:</strong></p>
+<p>Interfacial shear strength was measured using two distinct sample geometries to assess the effects of resin type and fiber orientation on potential debonding planes. Double lap shear tests were conducted according to ASTM D3528 standards, using a universal testing machine to quantify adhesive strength under varying conditions. The resulting data was used to inform the adhesion with failure condition in the computational model.</p>
+
+<p><strong>Impact Testing:</strong></p>
+<p>To validate the computational model and its predicted adhesive behavior, high-velocity impact tests were conducted using a high-velocity particle impactor. A Photonic Doppler Velocimetry (PDV) system was employed to measure the back-face velocity of the impacted samples, providing experimental data for model validation.</p>
+
+<p><strong>Computational Modeling</strong></p>
+<p>A high-fidelity finite element model was developed in LS-Dyna to simulate the composite's response to high-velocity impact. The model incorporated 72 individual layers, each with interlayer adhesive interfaces. A quarter-symmetry model was utilized to optimize computational efficiency. A biased mesh with element sizes ranging from 0.116 mm to 1.61 mm was employed, using solid elements.</p>
+
+<p><strong>Material Model:</strong></p>
+<p>An orthotropic elastic material model was used for the Dyneema® HB210 composite, with material directions assigned to each element. Erosion was incorporated into the composite material model to simulate the failure of fiber during the impact. To account for material failure during impact, an erosion model was incorporated into the composite material model. A Johnson-Cook constitutive model, with steel material properties, was used to accurately simulate the interaction between the projectile and the composite.</p>
+
+<p><strong>Adhesive Conditions:</strong></p>
+<p>Three adhesion scenarios were evaluated:</p>
+<ul>
+    <li>Perfect Adhesion: In this ideal scenario, the Dyneema® layers were assumed to be perfectly bonded without any interface failure. This was modeled by treating the composite as a single, solid plate.</li>
+    <li>Adhesion with Failure: To simulate more realistic material behavior, a Mixed Mode Cohesive Zone Model and tie-break contact were employed. This approach allowed for the modeling of adhesion loss during loading.</li>
+    <li>No Adhesion: This scenario represented the case where Dyneema® layers were stacked without any adhesive bond. An Surface to Surface contact algorithm was used to model this condition.</li>
+</ul>
+
+<p><strong>Ballistic Performance:</strong></p>
+<p>To assess the impact of interlayer adhesion on Dyneema® composite performance, the following key ballistic parameters were evaluated:</p>
+<ul>
+    <li>Back-Face Initial Peak Velocity: The maximum velocity of the back face of the composite during impact.</li>
+    <li>Back-Face Initial Peak Acceleration: The maximum acceleration experienced by the back face.</li>
+    <li>Bullet Deceleration: The rate at which the projectile loses velocity upon impact.</li>
+    <li>Penetration Depth: The depth to which the projectile penetrates the composite.</li>
+    <li>Bullet Speed After 50 µs: The velocity of the projectile 50 microseconds after impact.</li>
+    <li>Back-Face Maximum Displacement: The maximum displacement of the back face.</li>
+</ul>
+
+<p>The perfect adhesion scenario demonstrated superior performance showing, higher bullet deceleration, reduced penetration depth, lower residual bullet speed, and smaller back-face displacement. This translates to better protection for the user, as the composite absorbs more impact energy, limits penetration, and reduces the overall shock experienced. However, perfect adhesion is not physically achievable in real-world applications.</p>
+
+<p>The no adhesion condition results in a lower initial peak velocity, indicating that the impact energy is primarily transferred along the transverse direction of the composite rather than through its thickness. However, this configuration leads to maximum final deformation, as the composite material is forced to absorb the impact energy by deforming. This limitation highlights the importance of sufficient space within the vest to accommodate the deformation without compromising user safety.</p>
+
+<p>To achieve optimal performance while considering practical limitations, the adhesion with failure scenario offers a promising approach. By carefully engineering the interlayer adhesive properties, we can mitigate the negative effects of adhesion failure and approach the performance levels of the ideal perfect adhesion scenario. This can lead to significant improvements in the ballistic performance of Dyneema® composites, providing enhanced protection for users.</p>
+
+<p><strong>Conclusion:</strong></p>
+<p>The findings of this study highlight the importance of optimizing interlaminar adhesion to achieve optimal ballistic performance. While perfect adhesion is ideal, it is not physically achievable. Adhesion with failure offers a practical approach that can significantly enhance the performance of Dyneema® composites. By carefully engineering the interlayer adhesive properties, we can mitigate the negative effects of adhesion failure and approach the performance levels of the ideal scenario.</p>
+
+<p>By carefully considering the factors influencing interlaminar adhesion, such as layer orientation and processing conditions, it is possible to optimize the manufacturing process for Dyneema® composites. Proper sample preparation is essential to ensure accurate and reliable experimental results. By adhering to best practices in sample preparation, we can maximize the potential of Dyneema® composites and achieve optimal ballistic performance.</p>
+
+<p>Further research is needed to explore the influence of various factors, such as fiber orientation, resin type, and manufacturing process, on interlaminar adhesion and overall ballistic performance. By continuing to advance our understanding of these factors, we can develop even more effective and protective Dyneema®-based materials.</p>`, 'linkedin post/dyn_disp.mp4')">
 
           <img class="image" src="linkedin post/drop_test_display_image.png" data-description="Project 1 description goes here." draggable="false" />
           <span class="image-tag">Ballistic Imapct</span>
