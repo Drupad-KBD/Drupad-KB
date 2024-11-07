@@ -236,7 +236,8 @@
     position: relative;
     font-family: var(--primary-font);
     top: 100px; /* Adjust the top value as needed */
-  
+    margin-top: 20px;    /* Adds space above the paragraph */
+    margin-bottom: 20px; /* Adds space below the paragraph */
     left: -20px;
     font-size: 1.05rem;
     color: --text-color;
