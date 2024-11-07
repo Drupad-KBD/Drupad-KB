@@ -358,7 +358,7 @@
   }
 
 .project-title {
-  font-size: 1.25rem; /* Control font size here */
+  font-size: 1.2rem; /* Control font size here */
   font-weight: bold; /* Optional: make the title bold */
 }
 
@@ -384,7 +384,7 @@
 
 /* Adjusting the headings */
 #projects p strong, #projects h1, #projects h2, #projects h3 {
-  font-size: 1.25rem; /* Adjust heading font size */
+  font-size: 1.1rem; /* Adjust heading font size */
   margin-bottom: 10px; /* Space below headings */
   color: var(--text-color); /* Set heading color */
 }
