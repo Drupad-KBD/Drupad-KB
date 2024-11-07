@@ -356,7 +356,9 @@
     background-color: var(--background-color);
     
   }
-
+.spaced-section h2 + p {
+  margin-top: 20px;
+}
 
 /* For large screens: limit video width */
 @media (min-width: 768px) {
