@@ -393,7 +393,7 @@
 .spaced-section p {
   margin-bottom: 20px; /* Add extra space between each paragraph in the .spaced-section */
   line-height: 1.8; /* Add line height for better readability */
-    margin-left:40px;
+    margin-left:20px;
 }
 
 .spaced-section ul {
