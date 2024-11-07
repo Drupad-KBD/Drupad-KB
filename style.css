@@ -356,37 +356,41 @@
     background-color: var(--background-color);
     
   }
-.spaced-section h2 + p {
-  margin-top: 20px;
+
+
+#projects p {
+  font-size: 1rem;  /* Default font size for paragraphs */
+  line-height: 1.8; /* Adjust line spacing between paragraphs */
+  margin-bottom: 15px; /* Space between paragraphs */
 }
 
-.spaced-section {
-    margin-bottom: 20px; /* Space between sections */
+/* Text adjustments for strong text (bold text) */
+#projects p strong {
+  font-weight: bold; /* Make strong text bold */
+  color: var(--text-color); /* Make the bold text black */
 }
 
+/* Adjusting the headings */
+#projects p strong, #projects h1, #projects h2, #projects h3 {
+  font-size: 1.25rem; /* Adjust heading font size */
+  margin-bottom: 10px; /* Space below headings */
+  color: var(--text-color); /* Set heading color */
+}
+
+/* Spaced section style (for specific sections like Adhesion Testing) */
 .spaced-section p {
-    margin: 10px 0; /* Space between paragraphs within a section */
-    line-height: 1.6; /* Optional: Increase line spacing for readability */
+  margin-bottom: 20px; /* Add extra space between each paragraph in the .spaced-section */
+  line-height: 1.8; /* Add line height for better readability */
 }
 
-.section strong {
-    display: block;
-    font-size: 1.1em; /* Slightly larger for emphasis */
-    margin-bottom: 8px; /* Add space below headings */
+.spaced-section ul {
+  list-style-type: disc; /* Use bullet points for lists */
+  margin-left: 20px; /* Indentation for lists */
+  line-height: 1.8; /* Adjust line height for list items */
 }
 
-ul {
-    margin-top: 10px; /* Space between the heading and list */
-    margin-bottom: 20px; /* Consistent spacing below list */
-    padding-left: 20px; /* Indentation for list items */
-}
-
-li {
-    margin-bottom: 5px; /* Space between list items */
-}
-
-p {
-  line-height: 1.6; /* Adjust this value for more or less spacing */
+.spaced-section li {
+  margin-bottom: 10px; /* Space between list items */
 }
 
 
