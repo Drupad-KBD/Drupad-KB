@@ -63,6 +63,7 @@
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <div class="image-wrapper" ondblclick="openDescription('Interfacial Strength Study of Dyneema®', `
         <p><strong>Introduction:</strong></p>
+          <br>
 <p>Dyneema®, a high-performance composite made from Ultra High Molecular Weight Polyethylene (UHMWPE), renowned for its exceptional impact resistance and high strength-to-weight ratio. It is up to 15 times stronger than steel by weight and nearly 50% lighter than Kevlar coupled with resistance to water and abrasion made Dyneema® is a top choice for ballistic protection in military, law enforcement, and high-performance sports equipment.</p>
  <br>
 <p>Unlike traditional ballistic materials like Kevlar, Dyneema® composites have a minimal resin content, resulting in low interlaminar shear strength. This unique characteristic has received limited attention in research, as traditional studies often assume that interlaminar adhesion has a negligible impact on impact performance. However, our study challenges this assumption by investigating the critical role of interlaminar shear strength between UHMWPE plies in influencing the composite's ballistic performance.</p>
@@ -72,7 +73,7 @@
 <p>Once the model was validated, it was used to simulate various Dyneema® composite configurations with different interlaminar adhesion properties and material compositions. By systematically varying these parameters, the impact of interlayer adhesion on the composite's response to high-velocity impact was assessed. This approach allowed for the identification of optimal configurations that balance weight, flexibility, and ballistic performance.</p>
  <br>
 <p><strong>Experimental Testing:</strong></p>
-<br>
+<div class="spaced-section">
 <p><strong>Adhesion Testing:</strong></p>
            <br>
 <p>Interfacial shear strength was measured using two distinct sample geometries to assess the effects of resin type and fiber orientation on potential debonding planes. Double lap shear tests were conducted according to ASTM D3528 standards, using a universal testing machine to quantify adhesive strength under varying conditions. The resulting data was used to inform the adhesion with failure condition in the computational model.</p>
@@ -81,6 +82,8 @@
            <br>
 <p>To validate the computational model and its predicted adhesive behavior, high-velocity impact tests were conducted using a high-velocity particle impactor. A Photonic Doppler Velocimetry (PDV) system was employed to measure the back-face velocity of the impacted samples, providing experimental data for model validation.</p>
  <br>
+</div>
+        
 <p><strong>Computational Modeling</strong></p>
            <br>
 <p>A high-fidelity finite element model was developed in LS-Dyna to simulate the composite's response to high-velocity impact. The model incorporated 72 individual layers, each with interlayer adhesive interfaces. A quarter-symmetry model was utilized to optimize computational efficiency. A biased mesh with element sizes ranging from 0.116 mm to 1.61 mm was employed, using solid elements.</p>
