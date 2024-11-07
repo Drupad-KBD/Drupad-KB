@@ -58,8 +58,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
-
-
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <div class="image-wrapper" ondblclick="openDescription('Interfacial Strength Study of Dyneema®', `
         <p><strong>Introduction:</strong></p>
@@ -73,7 +71,7 @@
           <p>Once the model was validated, it was used to simulate various Dyneema® composite configurations with different interlaminar adhesion properties and material compositions. By systematically varying these parameters, the impact of interlayer adhesion on the composite's response to high-velocity impact was assessed. This approach allowed for the identification of optimal configurations that balance weight, flexibility, and ballistic performance.</p>
            
           <p><strong>Experimental Testing:</strong></p>
-          
+              <div class='spaced-section'>
               <p><strong>Adhesion Testing:</strong></p>
                          
               <p>Interfacial shear strength was measured using two distinct sample geometries to assess the effects of resin type and fiber orientation on potential debonding planes. Double lap shear tests were conducted according to ASTM D3528 standards, using a universal testing machine to quantify adhesive strength under varying conditions. The resulting data was used to inform the adhesion with failure condition in the computational model.</p>
@@ -81,9 +79,9 @@
               <p><strong>Impact Testing:</strong></p>
 
               <p>To validate the computational model and its predicted adhesive behavior, high-velocity impact tests were conducted using a high-velocity particle impactor. A Photonic Doppler Velocimetry (PDV) system was employed to measure the back-face velocity of the impacted samples, providing experimental data for model validation.</p>
-               <br>     
+              </div>    
           <p><strong>Computational Modeling</strong></p>
-                    
+          <div class='spaced-section'>          
           <p>A high-fidelity finite element model was developed in LS-Dyna to simulate the composite's response to high-velocity impact. The model incorporated 72 individual layers, each with interlayer adhesive interfaces. A quarter-symmetry model was utilized to optimize computational efficiency. A biased mesh with element sizes ranging from 0.116 mm to 1.61 mm was employed, using solid elements.</p>
            <br>
           <p><strong>Material Model:</strong></p>
@@ -99,7 +97,9 @@
               <li>Adhesion with Failure: To simulate more realistic material behavior, a Mixed Mode Cohesive Zone Model and tie-break contact were employed. This approach allowed for the modeling of adhesion loss during loading.</li>
               <li>No Adhesion: This scenario represented the case where Dyneema® layers were stacked without any adhesive bond. An Surface to Surface contact algorithm was used to model this condition.</li>
           </ul>
+          </div>
 
+          
           <p><strong>Ballistic Performance:</strong></p>
 
           <p>To assess the impact of interlayer adhesion on Dyneema® composite performance, the following key ballistic parameters were evaluated:</p>
