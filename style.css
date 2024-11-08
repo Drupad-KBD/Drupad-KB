@@ -251,6 +251,7 @@
       flex-direction: column; /* Stack items vertically */
       align-items: flex-start; /* Align items to the start */
     }
+
     
     .name-section,
     .about-section {
@@ -269,7 +270,7 @@
       top: 18; /* Reset top positioning */
       right: 0; /* Reset right positioning */
       left: 0; /* Reset left positioning */
-      margin-top: -40px; /* Add spacing between sections if needed */
+      margin-top: 1px; /* Add spacing between sections if needed */
      margin-bottom: 30px;
     }
   }
