@@ -493,7 +493,7 @@
         margin-top: 40px; /* Adjust margin to separate images */
     }
       #image-track {
-    margin-top: 10%; /* Increase top value to move images further down */
+    margin-top: 1%; /* Increase top value to move images further down */
   }
       #projects {
         margin-top: 80px; /* Increase the top margin for mobile view */
