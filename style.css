@@ -487,8 +487,8 @@
   @media (max-width: 768px) {
 
         #image-track > .image {
-        width: 70vmin; /* Make each image take the full viewport width */
-        height: 100%;  /* Keep the aspect ratio */
+        width: 100%; /* Make each image take the full viewport width */
+        height: auto;  /* Keep the aspect ratio */
         object-fit: cover; /* Ensure the image fits properly without distortion */
         margin-top: 40px; /* Adjust margin to separate images */
     }
