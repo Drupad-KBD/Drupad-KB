@@ -496,7 +496,7 @@
     margin-top: 1%; /* Increase top value to move images further down */
   }
       #projects {
-        margin-top: 80px; /* Increase the top margin for mobile view */
+        margin-top: 10px; /* Increase the top margin for mobile view */
     }
   
     .scroll-btn {
