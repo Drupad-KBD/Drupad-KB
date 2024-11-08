@@ -220,7 +220,7 @@
   
   .scramble-text {
     left: 5%;
-    top: 120px;
+    top: 65px;
     position: relative;
     color: var(--text-color);
     font-family: 'Space Mono', monospace;
@@ -235,7 +235,7 @@
     text-align: left;
     position: relative;
     font-family: var(--primary-font);
-    top: 100px; /* Adjust the top value as needed */
+    top: 60px; /* Adjust the top value as needed */
     margin-top: 20px;    /* Adds space above the paragraph */
     margin-bottom: 20px; /* Adds space below the paragraph */
     left: -20px;
@@ -287,13 +287,13 @@
     position: relative;
   }
   
-  #image-track {
-    width:300vw;
+   #image-track {
+    top: -6vmin;
+    width: 200vw;
     display: flex;
     gap: 4vmin;
     position: relative;
     left: 50%;
-    top: 2%;
     transform: translate(0%, 20%);
   }
 
@@ -462,7 +462,7 @@
   
   .scroll-btn {
     display: block;
-    margin: 120px 20px; /* Center the button */
+    margin: 80px 20px; /* Center the button */
     padding: 10px 20px;
     
     color: var(--background-color);
@@ -486,8 +486,8 @@
   @media (max-width: 768px) {
 
         #image-track > .image {
-        width: 100%; /* Make each image take the full viewport width */
-        height: auto;  /* Keep the aspect ratio */
+        width: 40vmin; /* Make each image take the full viewport width */
+        height: 100vmin;  /* Keep the aspect ratio */
         object-fit: cover; /* Ensure the image fits properly without distortion */
         margin-top: 40px; /* Adjust margin to separate images */
     }
@@ -500,7 +500,7 @@
   
     .scroll-btn {
       font-size: 14px; /* Adjust button size for mobile */
-      margin: 140px 20px; /* Center the button */
+      margin: 60px 20px; /* Center the button */
     }
   }
   
